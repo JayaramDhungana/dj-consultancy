@@ -20,4 +20,4 @@ RUN composer install --no-dev --optimize-autoloader
 EXPOSE 10000
 
 # Run migrations and seeders at container start, then serve
-CMD php artisan migrate --force && php artisan db:seed --force && php artisan serve --host=0.0.0.0 --port=10000
+CMD sh -c "php artisan config:clear && php artisan cache:clear && php artisan migrate --force && php artisan db:seed --force && php -S 0.0.0.0:10000 -t public"
