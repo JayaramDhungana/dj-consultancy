@@ -12,11 +12,14 @@ class LoginSeeder extends Seeder
      */
     public function run(): void
     {
-       DB::table('login')->insert([
-            'email' => 'superadmin@gmail.com',
-            'password' => 'admin@123', //
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
+      // Only insert if not exists
+        DB::table('login')->updateOrInsert(
+            ['email' => 'superadmin@gmail.com'], // check existing email
+            [
+                'password' => 'admin@123', // secure hashed password
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
     }
 }
