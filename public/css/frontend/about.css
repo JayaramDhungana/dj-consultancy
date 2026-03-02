@@ -1,0 +1,343 @@
+:root {
+  --primary-color: #282251;
+  --secondary-color: #D82D2E;
+  --tertiary-color: #7B68EE;
+}
+
+.about-white-premium {
+    padding: 56px 20px 0px;
+    background: #ffffff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 10px 0;
+}
+
+/* Hero */
+.about-hero {
+    text-align: center;
+    margin-bottom: 90px;
+    z-index: -10;
+}
+
+.about-hero h1 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    z-index: 0;
+}
+
+.about-hero h1 span {
+    background-color: var(--secondary-color);
+    /* background: linear-gradient(90deg, #6a11cb, #ff6b9d); */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 66px;
+}
+
+.about-hero p {
+    font-size: 20px;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Stats */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    text-align: center;
+    margin: 100px 0;
+    /* background-color:rgb(255 201 201 / 43%); */
+    background-color: var(--primary-color);
+    padding: 20px 15px;
+    /* background: linear-gradient(135deg, #f8f5ff, #fff8fb); */
+    border-radius: 1px solid #e0d6ff;
+    border-radius: 24px;
+}
+
+.stat h2 {
+    font-size: 40px;
+    font-weight: 900;
+    /* color: #7b68ee; */
+    /* color: var(--primary-color); */
+    color: white;
+}
+
+.stat span {
+    font-size: 48px;
+    /* color: #7b68ee; */
+    /* color: var(--secondary-color); */
+    color: white;
+}
+
+.stat p {
+    font-size: 18px;
+    /* color: #666; */
+    color: white;
+    margin-top: 10px;
+}
+
+/* Mission Vision Cards */
+.mv-grid {
+    display: flex;
+    gap: 50px;
+    /* margin: 120px 0; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(123, 104, 238, 0.12);
+    width: 80%;
+    max-width: 520px;
+    text-align: center;
+    transition: 0.4s;
+    border: 1px solid #f0e8ff;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 60px rgba(123, 104, 238, 0.2);
+}
+
+.icon-bg {
+    width: 120px;
+    height:120px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    font-size: 30px;
+    color: white;
+}
+
+.card h3 {
+    font-size: 28px;
+    margin: 20px 0 16px;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Why Choose */
+.why-section {
+    text-align: center;
+      margin: 91px 0;
+}
+
+.why-section h2 {
+    font-size: 46px;
+    margin-bottom: 80px;
+    color: var(--primary-color);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.why-item {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.4s;
+}
+
+.why-item:hover {
+    transform: translateY(-10px);
+}
+
+.why-item i {
+    font-size: 48px;
+    background-color: var(--primary-color);
+    /* background: linear-gradient(135deg, #7b68ee, #ff6b9d); */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.why-item h4 {
+    font-size: 22px;
+    margin: 15px 0;
+    color: #333;
+}
+
+.why-item p {
+    color: #777;
+}
+
+.content-section {
+  width: 85%;
+  display: flex;
+  gap: 4vw;
+  margin: 0px auto;
+}
+.left-section img {
+  width: 44vw;
+  height: 467px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+@media(max-width:1400px){
+  .left-section img{
+    height: 600px;
+  }
+
+}
+
+@media(max-width:998px){
+  .left-section img{
+    height: 700px;
+  }
+
+}
+
+@media(max-width:800px){
+  .left-section img{
+    height:300px;
+  }
+
+}
+.content-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+.content-paragraph {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+.why-list {
+  list-style: none;
+}
+.why-list li {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.why-list i {
+  color: var(--secondary-color);
+  margin-right: 12px;
+  font-size: 22px;
+}
+@media (max-width:800px){
+    .left-section img {
+  width: 100%;
+}
+    .content-section {
+flex-direction: column;
+}
+}
+
+/* ---------- EXPERTISE SECTION ---------- */
+.expertise-section {
+  width: 85%;
+  margin: 47px auto;
+  text-align: center;
+}
+.expertise-section h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+  position: relative;
+}
+.expertise-section h2::after {
+  content: '';
+  position: absolute;
+  left: 46%;
+  bottom: -15px;
+  width: 80px;
+  height: 5px;
+  background: var(--primary-color);
+  border-radius: 3px;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+}
+.expertise-card {
+  background: #fff;
+  padding: 40px 25px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,102,255,0.1);
+  transition: all 0.4s ease-in-out;
+  border: 1px solid #e8f0ff;
+}
+.expertise-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 50px rgba(0,102,255,0.2);
+}
+.expertise-icon {
+  font-size: 48px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+.expertise-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+.expertise-card p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 16px;
+}
+@media (max-width:920px){
+   .card-container {
+  grid-template-columns: repeat(2,1fr);
+}
+}
+@media (max-width:600px){
+   .card-container {
+  grid-template-columns: repeat(1,1fr);
+}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 42px;
+    }
+
+    .about-hero h1 span {
+        font-size: 50px;
+    }
+
+    .mv-grid,
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logos {
+        gap: 40px;
+    }
+
+    .logos img {
+        height: 55px;
+    }
+}

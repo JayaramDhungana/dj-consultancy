@@ -1,0 +1,192 @@
+:root {
+    --primary-color: #282251;
+    --secondary-color: #D82D2E;
+    --tertiary-color: #7B68EE;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2f3;
+}
+
+/* Sidebar */
+.sidebar {
+    background: #08032a9e;
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    color: white;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 22px;
+}
+
+.sidebar img{
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    background: #555;
+}
+
+.main-content {
+    margin-left: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color:rgb(248, 239, 240);
+    height: 100vh;
+}
+
+header h3 {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 25%;
+    border-radius: 5px;
+    box-shadow: 0 0 4px #aaa;
+    text-align: center;
+}
+
+.table-container {
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr th, table tr td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+}
+
+table tr:nth-child(even) {
+    background: #f1f1f1;
+}
+
+/* ---------- TABLET (max-width: 1024px) ---------- */
+@media (max-width: 1024px) {
+
+    .card {
+        width: 45%;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+}
+
+/* ---------- MOBILE (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+
+    /* Sidebar becomes top bar */
+    .sidebar {
+        position: relative;
+        width: 300vw;
+        height: auto;
+        text-align: center;
+    }
+
+    .sidebar img {
+        margin: 0 auto 10px;
+        display: block;
+    }
+
+    .sidebar ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .sidebar ul li {
+        width: 50%;
+    }
+
+    .sidebar ul li a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Main content full width */
+    .main-content {
+        margin-left: 0;
+        height: auto;
+    }
+
+    /* Cards stacked */
+    .card {
+        width: 100%;
+    }
+
+    header h3 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* Table responsive */
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+    }
+}
+
+/* ---------- SMALL MOBILE (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+
+    .sidebar h2 {
+        font-size: 18px;
+    }
+
+    .sidebar ul li {
+        width: 100%;
+    }
+
+    .card {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    header h3 {
+        font-size: 14px;
+    }
+}
