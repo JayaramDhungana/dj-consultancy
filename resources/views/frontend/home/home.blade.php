@@ -8,12 +8,24 @@
     <div class="hero-content">
       <h1>Nepal's leading study abroad consultants</h1>
       <p>We've assisted over 760,000 students in their study abroad journey.</p>
-      <div class="country-buttons">
-        @foreach ($studyAbroadEntries as $entry)
-          <a href="{{ route('study_abroad.show', $entry->id) }}" class="btn">{{ $entry->title }}<i
+      {{-- <div class="country-buttons">
+        @foreach ($studyAbroadEntries ?? [] as $entry)
+          <a href="{{ route('study_abroad.show', $entry->id??0) }}" class="btn">{{ $entry->title ?? "No Title Available" }}<i
               class="fa-solid fa-circle-right"></i></a>
         @endforeach
-      </div>
+      </div> --}}
+      <div class="country-buttons">
+    @forelse ($studyAbroadEntries ?? [] as $entry)
+        @if(!empty($entry->id))
+            <a href="{{ route('study_abroad.show', $entry->id) }}" class="btn">
+                {{ $entry->title ?? "No Title Available" }}
+                <i class="fa-solid fa-circle-right"></i>
+            </a>
+        @endif
+    @empty
+        <p>No study abroad destinations available.</p>
+    @endforelse
+</div>
     </div>
     <div class="pic">
       <img src="{{ asset($heroImages->image) }}" alt="images" width="100%">
@@ -77,16 +89,16 @@
   </section>
 
   <section class="testimonials">
-    <h2>{{ $testinomialsTitles->title }}</h2>
+    <h2>{{ $testinomialsTitles->title ?? "Testimonials" }}</h2>
     <p class="subtitle">
        {{ $testinomialsTitles->subtitle }}
     </p>
 
     <div class="testi-container">
-      @foreach ($testinomialsEntries as $entry )
+      @foreach ($testinomialsEntries ?? [] as $entry )
         <div class="testi-card">
         <span class="quote">❝</span>
-        <p>{{ $entry->testimonials_message }}</p>
+        <p>{{ $entry->testimonials_message ?? "No testimonials available." }}</p>
         <div class="pin-section">
           <img class="pin" src="https://www.aeccglobal.com.np/images/2023/08/18/aecc-pin.png" alt="pin">
           <div class="user-info">
