@@ -16,9 +16,13 @@ RUN curl -sS https://getcomposer.org/installer | php \
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
+# ADD THIS LINE 👇
+RUN php artisan storage:link
+
 # Expose port
 EXPOSE 10000
 
 # Run migrations and seeders at container start, then serve
+# CMD sh -c "php artisan migrate --force && php artisan db:seed --force && php -S 0.0.0.0:10000 -t public"
 # CMD sh -c "php artisan migrate --force && php artisan db:seed --force && php -S 0.0.0.0:10000 -t public"
 CMD sh -c "php artisan migrate --force && php artisan db:seed --force && php artisan serve --host=0.0.0.0 --port=10000"
