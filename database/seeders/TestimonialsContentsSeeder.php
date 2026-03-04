@@ -12,25 +12,25 @@ class TestimonialsContentsSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('testimonials_contents')->insert([
+        DB::table('testimonials_contents')->insertOrIgnore([
             [
-                'student_name' => 'John Doe',
+                'student_name' => 'Sushant Pant',
                 'student_country' => 'USA',
-                'testimonials_message' => 'This course completely changed my perspective. Highly recommend!',
+                'testimonials_message' => 'Studying abroad with this program was a life-changing experience. It broadened my outlook, gave me confidence, and helped me grow both academically and personally. I would highly recommend it to anyone considering studying abroad.',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'student_name' => 'Maria Rossi',
-                'student_country' => 'Italy',
-                'testimonials_message' => 'The instructors were amazing and supportive throughout the learning journey.',
+                'student_name' => 'Ram Kumar Timalsina',
+                'student_country' => 'Germany',
+                'testimonials_message' => 'The study abroad program gave me exposure to new cultures and academic perspectives. I gained confidence, made lifelong friends, and truly enjoyed every moment. It was a great experience that I’ll always cherish.',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'student_name' => 'Akira Yamamoto',
-                'student_country' => 'Japan',
-                'testimonials_message' => 'I learned so much in such a short period. Great experience!',
+                'student_name' => 'Shubham Mall',
+                'student_country' => 'Canada',
+                'testimonials_message' => 'The study abroad program opened up incredible opportunities for me. I was able to experience diverse cultures, expand my academic knowledge, and build lifelong connections. It was truly a life-changing experience that I will never forget.',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

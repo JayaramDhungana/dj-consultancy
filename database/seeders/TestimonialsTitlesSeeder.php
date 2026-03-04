@@ -12,22 +12,10 @@ class TestimonialsTitlesSeeder extends Seeder
      */
     public function run(): void
     {
-          DB::table('testimonials_titles')->insert([
+          DB::table('testimonials_titles')->insertOrIgnore([
             [
                 'title' => 'Our Happy Clients',
                 'subtitle' => 'See what our customers are saying about us',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => 'Testimonials',
-                'subtitle' => 'Real feedback from real people',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => 'Customer Stories',
-                'subtitle' => 'Stories from our valued clients',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

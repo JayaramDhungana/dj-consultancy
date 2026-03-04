@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('testimonials_titles', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title')->unique();
             $table->string('subtitle');
             $table->timestamps();
         });

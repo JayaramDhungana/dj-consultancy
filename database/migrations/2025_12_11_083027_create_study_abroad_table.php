@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('study_abroad', function (Blueprint $table) {
         $table->id();
-        $table->string('title');
+        $table->string('title')->unique();
         $table->string('header_image');
         $table->string('img1');
         $table->string('img2');

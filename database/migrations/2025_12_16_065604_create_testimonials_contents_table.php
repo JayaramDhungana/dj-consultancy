@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('testimonials_contents', function (Blueprint $table) {
             $table->id();
-            $table->string('student_name');
+            $table->string('student_name') ->unique();
             $table->string('student_country');
             $table->string('testimonials_message');
             $table->timestamps();

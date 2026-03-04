@@ -13,7 +13,7 @@ class HeroImageSeeder extends Seeder
     public function run(): void
     {
         // inserting data
-        DB::table('hero_image')->insert([
+        DB::table('hero_image')->insertOrIgnore([
             [
                 'image' => 'images/picture/pic-1.webp',
                 'created_at' => now(),
